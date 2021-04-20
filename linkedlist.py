@@ -66,6 +66,17 @@ class LinkedList(object):
         while (tempnode != None):
             print("Node: ", tempnode.get_data())
             tempnode = tempnode.get_next()
+     
+    def removeDuplicates(self,head):
+        #Write your code here
+        temp=head
+        while(temp is not None and temp.next is not None):
+            nextnode= temp.next
+            if(temp.data==nextnode.data):
+                temp.next=nextnode.next
+            else:
+                temp=temp.next
+        return head
 
 
 # create a linked list and insert some items
