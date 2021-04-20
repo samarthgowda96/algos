@@ -42,17 +42,88 @@ class LinkedList:
             itr=itr.next
         return count
 
+    def remove_at(self,index):
+        if index<0 or index>= self.get_length():
+            print('invalid index')
+        if(index==0):
+            self.head=self.head.next
+            return
+        
+        itr= self.head
+        count=0
+        while itr:
+            if(count==index-1):
+                itr.next=itr.next.next
+                break
+            itr=itr.next
+            count+=1
+    def insert_at(self,index,data):
+        if index<0 or index>self.get_length():
+            print('invalid index')
+        if(index==0):
+            self.insert_at_beginning(data)
+            return
+        itr= self.head
+        count=0
+        while itr:
+            
+            if count==index-1:
+                 node=Node(data,itr.next)
+                 itr.next=node
+              
+
+                 break
+            itr=itr.next
+            count+=1
+    def insert_after_value(self,data_after,data_to_insert):
+        itr= self.head
+        if itr is None:
+            return
+        
+        if(itr.data==data_after):
+                node = Node(data_to_insert,itr.next)
+                itr.next=node
+                
+        while itr:
+            if(itr.data==data_after):
+                node =Node(data_to_insert,itr.next)
+                itr.next= node
+                break
+            itr=itr.next
+    def remove_by_value(self,data):
+        itr= self.head
+        if itr is None:
+            return
+        if(itr.data==data):
+            itr = itr.next 
+            return 
+                
+        while itr.next:
+            if(itr.next.data==data):
+                itr.next=itr.next.next
+                break
+            
+            itr=itr.next
+  
+
 if __name__ == "__main__":
     ll= LinkedList()
     
-    ll.insert_at_beginning(10)
+    """ ll.insert_at_beginning(10)
     ll.insert_at_beginning(1)
     ll.insert_at_beginning(30)
-    ll.insert_at_end(100)
+    ll.insert_at_end(100) """
 
     ll.insert_values(['banana','mango', 'apple'])
+    ll.insert_at_beginning(1)
+    ll.insert_at_beginning(30)
     print(ll.get_length())
+    #ll.remove_at(0)
+    #ll.insert_at(4,'figes')
+    ll.remove_by_value(30)
+    #ll.insert_after_value("mango",'sasa')
+    
     ll.print()
-        
+         
 
         
