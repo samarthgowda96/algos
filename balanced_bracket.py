@@ -1,6 +1,6 @@
 def balancedBracket(string):
     openingBracket="({["
-    closingBracket=")}"
+    closingBracket=")}]"
     matchingBrackets={")":"(","]":"[","}":"{"}
     stack=[]
     for i in string:
