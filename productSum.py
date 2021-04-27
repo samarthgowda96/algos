@@ -8,5 +8,5 @@ def productSum(array, multiplier=1):
     return sumProd*multiplier
 
 
-array= [1,-1,[3,7],9]
-print(productSum(array, multiplier=1))
+array= [1,-1,[3,7],9,2]
+print(productSum(array))
