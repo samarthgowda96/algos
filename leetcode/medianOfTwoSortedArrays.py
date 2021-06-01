@@ -5,7 +5,7 @@ class Solution:
         nums1.sort()
         if(len(nums1)%2==0):
             mid= len(nums1)//2
-            median = (nums1[mid-1]+nums1[mid])//2
+            median = (nums1[mid-1]+nums1[mid])/2
         else:
             mid= len(nums1)//2
             median= nums1[mid]
