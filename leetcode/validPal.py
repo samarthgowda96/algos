@@ -7,7 +7,7 @@ class Solution:
             if s[leftidx].isalnum() is False:
                 leftidx=leftidx+1
                 continue
-            if s[rightidx].isalnum()is False:
+            if s[rightidx].isalnum() is False:
                 rightidx=rightidx-1
                 continue
             if s[leftidx]!=s[rightidx]:
