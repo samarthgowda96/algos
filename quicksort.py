@@ -3,7 +3,7 @@
 
 items = [10,99,45,1,69,76,100,23]
 
-
+ 
 def quickSort(dataset, first, last):
     if first < last:
         # calculate the split point
@@ -25,7 +25,7 @@ def partition(datavalues, first, last):
     done = False
     while not done:
         # TODO: advance the lower index
-        while lower<=upper and datavalues[lower]<=pivotvalue:
+        if lower<=upper and datavalues[lower]<=pivotvalue:
             lower=lower+1
 
         # TODO: advance the upper index
@@ -33,7 +33,7 @@ def partition(datavalues, first, last):
             upper=upper-1
 
         # TODO: if the two indexes cross, we have found the split point
-        if upper<lower:
+        if upper<lower: 
             done=True
         else:
             temp =datavalues[upper]
