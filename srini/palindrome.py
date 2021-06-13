@@ -1,5 +1,5 @@
 def palindrome(string):
     return string[::] == string[::-1]
 
-string="naman"
+string="namasn"
 print(palindrome(string))
