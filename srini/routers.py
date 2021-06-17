@@ -2,8 +2,6 @@ from collections import defaultdict
 class Graph:
     def findReqRouters(self,g,n):
         connections= defaultdict(list)
-    
-       
         for a, b in g:
             connections[a].append(b)
             connections[b].append(a)
@@ -24,6 +22,7 @@ class Graph:
                     low[curr] = min(low[curr], disc[next])
                 if low[next] > disc[curr]:
                     ans.append(curr)
+                    #print(ans)
         dfs(0,-1)
         return sorted(ans)
 
