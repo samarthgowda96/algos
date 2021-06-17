@@ -16,6 +16,7 @@ class Stack:
             for i in range (len(self.stack2)):
                 temp= self.stack2.pop()
                 self.stack1.append(temp)
+        return self.stack1
 
    
 
