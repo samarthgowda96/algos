@@ -16,7 +16,7 @@ class Students:
             res.append(tempCount)
         for i in range(len(res)):
             statement="student {} has scored {} out of 5 right answers in the finals"
-            print(statement.format(i,res[i]))
+            print(statement.format(i+1,res[i]))
             
 ques= [["A", "B", "C", "D", "B"],
 
