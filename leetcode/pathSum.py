@@ -42,10 +42,6 @@ def pathSum(tree,total):
        if currentNode.right is not None:
             nodeStackk.append(currentNode.right)
             sumStackk.append(currentSum-currentNode.right.value)
-
-   
-
-
     return False
 
 
