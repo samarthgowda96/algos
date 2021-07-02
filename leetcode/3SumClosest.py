@@ -13,3 +13,5 @@ def threeSumClosest(nums,target):
             h=h+1
     return total
 
+
+
