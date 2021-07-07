@@ -10,3 +10,4 @@ def countingEle(arr):
 
 arr=[1,2,3]
 print(countingEle(arr))
+   

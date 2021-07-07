@@ -20,11 +20,11 @@ class BST:
                     currentNode= currentNode.right
         return self
 
-
+ 
 def preorder(tree, array):
         if tree is not None:
           
-            array.append(tree.value)
+            array.append(tree.value) 
             preorder(tree.left, array)
             preorder(tree.right, array)
         return array
