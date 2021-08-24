@@ -14,7 +14,15 @@ class Strings():
                 boo=True
         return boo
 
+    def URLify(self,string,l):
+        new=string[:l]
+        finalString =new.replace(' ','%20')
+        return (finalString)
+
+
+
 
 s=Strings()
-print(s.checkPerm('sam','sam'))
+#print(s.checkPerm('sam','sam'))
 #print(s.isUnique('sam'))
+print(s.URLify('Mr John    Smith    ',13))
