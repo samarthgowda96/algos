@@ -14,4 +14,4 @@ class Solution:
         if len(stones):
             return stones[0]
         else:
-            return 0
+            return 0 
