@@ -1,5 +1,5 @@
 class Solution:
-    def lastStoneWeight(self, stones: List[int]) -> int:
+    def lastStoneWeight(self, stones):
         
         while len(stones) >1:
             firstMaxStone = max(stones)
