@@ -9,8 +9,10 @@ class Node:
     
     def breathFirstSearch(self, array):
         queue=[self]
+        print(len(queue))
         while len(queue)>0:
             current= queue.pop(0)
+            #print(current.name)
             array.append(current.name)
             for child in current.children:
                 queue.append(child)
